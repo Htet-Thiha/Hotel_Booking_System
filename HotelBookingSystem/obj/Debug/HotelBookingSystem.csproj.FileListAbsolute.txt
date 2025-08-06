@@ -1,0 +1,11 @@
+c:\users\ngateeth's\documents\visual studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\bin\Debug\HotelBookingSystem.exe.config
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\bin\Debug\HBS_DB.mdb
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\bin\Debug\HotelBookingSystem.exe
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\bin\Debug\HotelBookingSystem.pdb
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.csprojResolveAssemblyReference.cache
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.HomePage.resources
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.LoginForm.resources
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.Properties.Resources.resources
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.csproj.GenerateResource.Cache
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.exe
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.pdb
