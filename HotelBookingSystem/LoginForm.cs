@@ -42,7 +42,6 @@ namespace HotelBookingSystem
 
                         if (count > 0)
                         {
-                            // Login successful
                             Form homePage = new HomePage();
                             homePage.Show();
                             this.Hide();

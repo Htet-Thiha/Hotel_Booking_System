@@ -19,10 +19,16 @@ namespace HotelBookingSystem
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hBS_DBDataSet1.tblRoomType' table. You can move, or remove it, as needed.
-            this.tblRoomTypeTableAdapter.Fill(this.hBS_DBDataSet1.tblRoomType);
-            
+            // TODO: This line of code loads data into the 'hBS_DBDataSet.tblBooking' table. You can move, or remove it, as needed.
+            this.tblBookingTableAdapter.Fill(this.hBS_DBDataSet.tblBooking);
 
         }
+
+        private void bookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form BookingForm = new BookingForm();
+            BookingForm.Show();
+        }
+
     }
 }
