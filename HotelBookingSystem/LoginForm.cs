@@ -16,6 +16,7 @@ namespace HotelBookingSystem
         public LoginForm()
         {
             InitializeComponent();
+
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -57,6 +58,41 @@ namespace HotelBookingSystem
                     MessageBox.Show("Database error: " + ex.Message);
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lineShape1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
