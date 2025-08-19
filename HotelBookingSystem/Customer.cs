@@ -157,6 +157,91 @@ namespace HotelBookingSystem
         }
 
 
+        public DataRow GetCustomersWithID(int customerID)
+        {
+            DataTable table = new DataTable();
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM tblCustomer WHERE customer_ID = ?";
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("?", customerID);
+                    using (OleDbDataAdapter adapter = new OleDbDataAdapter(command))
+                    {
+                        adapter.Fill(table);
+                    }
+                }
+            }
+
+            return table.Rows.Count > 0 ? table.Rows[0] : null;
+        }
+
+        public DataSet SearchCustomersWithPhone(string phoneNumberPart)
+        {
+            DataSet dataSet = new DataSet();
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM tblCustomer WHERE customer_phone LIKE ?";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+                        
+                        command.Parameters.AddWithValue("?", "%" + phoneNumberPart + "%");
+
+                        using (OleDbDataAdapter adapter = new OleDbDataAdapter(command))
+                        {
+                            adapter.Fill(dataSet, "tblCustomer");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show("Error reading data: " + ex.Message);
+                }
+            }
+
+            return dataSet;
+        }
+
+        public DataSet SerachCustomersWithName(string namePart)
+        {
+            DataSet dataSet = new DataSet();
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM tblCustomer WHERE customer_name LIKE ?";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+
+                        command.Parameters.AddWithValue("?", "%" + namePart + "%");
+
+                        using (OleDbDataAdapter adapter = new OleDbDataAdapter(command))
+                        {
+                            adapter.Fill(dataSet, "tblCustomer");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show("Error reading data: " + ex.Message);
+                }
+            }
+
+            return dataSet;
+        }
+
         public bool UpdateCustomer(int customer_ID, string CustomerName, string Phone, string Email, string NrcType, int NrcNo)
         {
             using (OleDbConnection connection = new OleDbConnection(connectionString))

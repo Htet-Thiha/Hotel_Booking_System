@@ -32,5 +32,16 @@ namespace HotelBookingSystem.Properties {
                 return ((string)(this["HBS_DBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"C:\\Users\\Ngateeth\'s\\Documents\\HBS_D" +
+            "B.mdb\"")]
+        public string HBS_DBConnectionString1 {
+            get {
+                return ((string)(this["HBS_DBConnectionString1"]));
+            }
+        }
     }
 }

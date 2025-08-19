@@ -9,9 +9,9 @@ using System.Data;
 namespace HotelBookingSystem
 {
     class Room
-    {      
-        public string Room_No { get; set; }    
-        public int Room_Type_ID { get; set; }   
+    {
+        public string Room_No { get; set; }
+        public int Room_Type_ID { get; set; }
         public string Status { get; set; }
 
         public string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ngateeth's\Documents\HBS_DB.mdb";
@@ -25,11 +25,13 @@ namespace HotelBookingSystem
             Status = status;
         }
 
-        public bool AddRoom(){
+        public bool AddRoom()
+        {
 
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
-                try{
+                try
+                {
                     connection.Open();
                     string query = "INSERT INTO tblRoom ( room_no, room_type_ID, status ) VALUES (?, ?,?)";
                     using (OleDbCommand command = new OleDbCommand(query, connection))
@@ -43,7 +45,8 @@ namespace HotelBookingSystem
                         return result > 0;
                     }
                 }
-                catch{
+                catch
+                {
                     return false;
                 }
             }
@@ -72,7 +75,7 @@ namespace HotelBookingSystem
                     return false;
                 }
             }
-       }
+        }
 
         public DataSet GetRooms()
         {
@@ -119,16 +122,133 @@ namespace HotelBookingSystem
 
                         int result = command.ExecuteNonQuery();
 
-                        return result > 0; 
+                        return result > 0;
                     }
                 }
                 catch
-                {         
+                {
                     return false;
                 }
             }
         }
 
+        public bool UpdateRoomStatus(int roomId,string status)
+        {
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "UPDATE tblRoom SET status = ? WHERE room_ID = ?";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("?", status);
+                        command.Parameters.AddWithValue("?", roomId);
+
+                        int result = command.ExecuteNonQuery();
+
+                        return result > 0;
+                    }
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool UpdateStatusByID(int roomId, string status)
+        {
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "UPDATE tblRoom SET status = ? WHERE room_ID = ?";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("?", status);
+                        command.Parameters.AddWithValue("?", roomId);
+
+                        int result = command.ExecuteNonQuery();
+
+                        return result > 0;
+                    }
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+
+        public DataRow GetRoomById(int roomId)
+        {
+            DataTable table = new DataTable();
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM tblRoom WHERE room_ID = ?";
+
+                    using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection))
+                    {
+                        adapter.SelectCommand.Parameters.AddWithValue("?", roomId);
+
+                        adapter.Fill(table);
+                    }
+                }
+                catch
+                {
+                    System.Windows.Forms.MessageBox.Show("Error fetching room by ID");
+                }
+            }
+
+            if (table.Rows.Count > 0)
+                return table.Rows[0];
+            else
+                return null;
+        }
+
+        public int GetTotalRoomsByStatus(string status)
+        {
+            int totalRooms = 0;
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT COUNT(*) FROM tblRoom WHERE status = ?";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("?", status);
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != DBNull.Value && result != null)
+                        {
+                            totalRooms = Convert.ToInt32(result);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show("Error calculating total rooms: " + ex.Message);
+                }
+            }
+
+            return totalRooms;
+        }
 
     }
 

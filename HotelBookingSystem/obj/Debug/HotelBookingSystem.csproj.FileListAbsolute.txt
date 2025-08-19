@@ -11,3 +11,4 @@ C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\Hot
 C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.pdb
 C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.BookingForm.resources
 C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.DataShowForm.resources
+C:\Users\Ngateeth's\Documents\Visual Studio 2012\Projects\HotelBookingSystem\HotelBookingSystem\obj\Debug\HotelBookingSystem.RoomForm.resources

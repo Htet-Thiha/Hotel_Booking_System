@@ -20,9 +20,9 @@ namespace HotelBookingSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("HBS_DBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("HBS_DBDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class HBS_DBDataSet : global::System.Data.DataSet {
+    public partial class HBS_DBDataSet2 : global::System.Data.DataSet {
         
         private tblBookingDataTable tabletblBooking;
         
@@ -52,7 +52,7 @@ namespace HotelBookingSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public HBS_DBDataSet() {
+        public HBS_DBDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -63,7 +63,7 @@ namespace HotelBookingSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected HBS_DBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected HBS_DBDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -240,7 +240,7 @@ namespace HotelBookingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            HBS_DBDataSet cln = ((HBS_DBDataSet)(base.Clone()));
+            HBS_DBDataSet2 cln = ((HBS_DBDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -379,9 +379,9 @@ namespace HotelBookingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "HBS_DBDataSet";
+            this.DataSetName = "HBS_DBDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/HBS_DBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/HBS_DBDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletblBooking = new tblBookingDataTable();
@@ -477,7 +477,7 @@ namespace HotelBookingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            HBS_DBDataSet ds = new HBS_DBDataSet();
+            HBS_DBDataSet2 ds = new HBS_DBDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -562,12 +562,6 @@ namespace HotelBookingSystem {
             
             private global::System.Data.DataColumn columntotal_price;
             
-            private global::System.Data.DataColumn columntotal_guest;
-            
-            private global::System.Data.DataColumn columnspecial_request;
-            
-            private global::System.Data.DataColumn columndeposit_amount;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblBookingDataTable() {
@@ -643,30 +637,6 @@ namespace HotelBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn total_guestColumn {
-                get {
-                    return this.columntotal_guest;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn special_requestColumn {
-                get {
-                    return this.columnspecial_request;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn deposit_amountColumn {
-                get {
-                    return this.columndeposit_amount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -702,17 +672,14 @@ namespace HotelBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblBookingRow AddtblBookingRow(tblCustomerRow parenttblCustomerRowBytblCustomertblBooking, string status, System.DateTime booking_date, int total_price, int total_guest, string special_request, int deposit_amount) {
+            public tblBookingRow AddtblBookingRow(tblCustomerRow parenttblCustomerRowBytblCustomertblBooking, string status, System.DateTime booking_date, int total_price) {
                 tblBookingRow rowtblBookingRow = ((tblBookingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         status,
                         booking_date,
-                        total_price,
-                        total_guest,
-                        special_request,
-                        deposit_amount};
+                        total_price};
                 if ((parenttblCustomerRowBytblCustomertblBooking != null)) {
                     columnValuesArray[1] = parenttblCustomerRowBytblCustomertblBooking[0];
                 }
@@ -750,9 +717,6 @@ namespace HotelBookingSystem {
                 this.columnstatus = base.Columns["status"];
                 this.columnbooking_date = base.Columns["booking_date"];
                 this.columntotal_price = base.Columns["total_price"];
-                this.columntotal_guest = base.Columns["total_guest"];
-                this.columnspecial_request = base.Columns["special_request"];
-                this.columndeposit_amount = base.Columns["deposit_amount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -768,12 +732,6 @@ namespace HotelBookingSystem {
                 base.Columns.Add(this.columnbooking_date);
                 this.columntotal_price = new global::System.Data.DataColumn("total_price", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntotal_price);
-                this.columntotal_guest = new global::System.Data.DataColumn("total_guest", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotal_guest);
-                this.columnspecial_request = new global::System.Data.DataColumn("special_request", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnspecial_request);
-                this.columndeposit_amount = new global::System.Data.DataColumn("deposit_amount", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndeposit_amount);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnbooking_ID}, true));
                 this.columnbooking_ID.AutoIncrement = true;
@@ -782,7 +740,6 @@ namespace HotelBookingSystem {
                 this.columnbooking_ID.AllowDBNull = false;
                 this.columnbooking_ID.Unique = true;
                 this.columnstatus.MaxLength = 255;
-                this.columnspecial_request.MaxLength = 536870910;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -850,7 +807,7 @@ namespace HotelBookingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HBS_DBDataSet ds = new HBS_DBDataSet();
+                HBS_DBDataSet2 ds = new HBS_DBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1215,7 +1172,7 @@ namespace HotelBookingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HBS_DBDataSet ds = new HBS_DBDataSet();
+                HBS_DBDataSet2 ds = new HBS_DBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1550,7 +1507,7 @@ namespace HotelBookingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HBS_DBDataSet ds = new HBS_DBDataSet();
+                HBS_DBDataSet2 ds = new HBS_DBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1840,7 +1797,7 @@ namespace HotelBookingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HBS_DBDataSet ds = new HBS_DBDataSet();
+                HBS_DBDataSet2 ds = new HBS_DBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2148,7 +2105,7 @@ namespace HotelBookingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HBS_DBDataSet ds = new HBS_DBDataSet();
+                HBS_DBDataSet2 ds = new HBS_DBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2438,7 +2395,7 @@ namespace HotelBookingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HBS_DBDataSet ds = new HBS_DBDataSet();
+                HBS_DBDataSet2 ds = new HBS_DBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2519,8 +2476,6 @@ namespace HotelBookingSystem {
             private global::System.Data.DataColumn columnsession_available;
             
             private global::System.Data.DataColumn columnsession_fee;
-            
-            private global::System.Data.DataColumn columnservice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2621,14 +2576,6 @@ namespace HotelBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn serviceColumn {
-                get {
-                    return this.columnservice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2664,7 +2611,7 @@ namespace HotelBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblRoomTypeRow AddtblRoomTypeRow(string room_Type, int price_per_night, int max_person, bool extra_available, int extra_fee, bool session_available, int session_fee, string service) {
+            public tblRoomTypeRow AddtblRoomTypeRow(string room_Type, int price_per_night, int max_person, bool extra_available, int extra_fee, bool session_available, int session_fee) {
                 tblRoomTypeRow rowtblRoomTypeRow = ((tblRoomTypeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2674,8 +2621,7 @@ namespace HotelBookingSystem {
                         extra_available,
                         extra_fee,
                         session_available,
-                        session_fee,
-                        service};
+                        session_fee};
                 rowtblRoomTypeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblRoomTypeRow);
                 return rowtblRoomTypeRow;
@@ -2713,7 +2659,6 @@ namespace HotelBookingSystem {
                 this.columnextra_fee = base.Columns["extra_fee"];
                 this.columnsession_available = base.Columns["session_available"];
                 this.columnsession_fee = base.Columns["session_fee"];
-                this.columnservice = base.Columns["service"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2735,8 +2680,6 @@ namespace HotelBookingSystem {
                 base.Columns.Add(this.columnsession_available);
                 this.columnsession_fee = new global::System.Data.DataColumn("session_fee", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsession_fee);
-                this.columnservice = new global::System.Data.DataColumn("service", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnservice);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnroom_type_ID}, true));
                 this.columnroom_type_ID.AutoIncrement = true;
@@ -2745,7 +2688,6 @@ namespace HotelBookingSystem {
                 this.columnroom_type_ID.AllowDBNull = false;
                 this.columnroom_type_ID.Unique = true;
                 this.columnroom_Type.MaxLength = 255;
-                this.columnservice.MaxLength = 536870910;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2813,7 +2755,7 @@ namespace HotelBookingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HBS_DBDataSet ds = new HBS_DBDataSet();
+                HBS_DBDataSet2 ds = new HBS_DBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3104,7 +3046,7 @@ namespace HotelBookingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HBS_DBDataSet ds = new HBS_DBDataSet();
+                HBS_DBDataSet2 ds = new HBS_DBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3254,54 +3196,6 @@ namespace HotelBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int total_guest {
-                get {
-                    try {
-                        return ((int)(this[this.tabletblBooking.total_guestColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'total_guest\' in table \'tblBooking\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblBooking.total_guestColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string special_request {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblBooking.special_requestColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'special_request\' in table \'tblBooking\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblBooking.special_requestColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int deposit_amount {
-                get {
-                    try {
-                        return ((int)(this[this.tabletblBooking.deposit_amountColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'deposit_amount\' in table \'tblBooking\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblBooking.deposit_amountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblCustomerRow tblCustomerRow {
                 get {
                     return ((tblCustomerRow)(this.GetParentRow(this.Table.ParentRelations["tblCustomertblBooking"])));
@@ -3357,42 +3251,6 @@ namespace HotelBookingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Settotal_priceNull() {
                 this[this.tabletblBooking.total_priceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istotal_guestNull() {
-                return this.IsNull(this.tabletblBooking.total_guestColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settotal_guestNull() {
-                this[this.tabletblBooking.total_guestColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isspecial_requestNull() {
-                return this.IsNull(this.tabletblBooking.special_requestColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setspecial_requestNull() {
-                this[this.tabletblBooking.special_requestColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isdeposit_amountNull() {
-                return this.IsNull(this.tabletblBooking.deposit_amountColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setdeposit_amountNull() {
-                this[this.tabletblBooking.deposit_amountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4264,22 +4122,6 @@ namespace HotelBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string service {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblRoomType.serviceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'service\' in table \'tblRoomType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblRoomType.serviceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isroom_TypeNull() {
                 return this.IsNull(this.tabletblRoomType.room_TypeColumn);
             }
@@ -4360,18 +4202,6 @@ namespace HotelBookingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setsession_feeNull() {
                 this[this.tabletblRoomType.session_feeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsserviceNull() {
-                return this.IsNull(this.tabletblRoomType.serviceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetserviceNull() {
-                this[this.tabletblRoomType.serviceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4741,7 +4571,7 @@ namespace HotelBookingSystem {
         }
     }
 }
-namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
+namespace HotelBookingSystem.HBS_DBDataSet2TableAdapters {
     
     
     /// <summary>
@@ -4870,13 +4700,10 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("status", "status");
             tableMapping.ColumnMappings.Add("booking_date", "booking_date");
             tableMapping.ColumnMappings.Add("total_price", "total_price");
-            tableMapping.ColumnMappings.Add("total_guest", "total_guest");
-            tableMapping.ColumnMappings.Add("special_request", "special_request");
-            tableMapping.ColumnMappings.Add("deposit_amount", "deposit_amount");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tblBooking` WHERE ((`booking_ID` = ?) AND ((? = 1 AND `customer_ID` IS NULL) OR (`customer_ID` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `booking_date` IS NULL) OR (`booking_date` = ?)) AND ((? = 1 AND `total_price` IS NULL) OR (`total_price` = ?)) AND ((? = 1 AND `total_guest` IS NULL) OR (`total_guest` = ?)) AND ((? = 1 AND `deposit_amount` IS NULL) OR (`deposit_amount` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tblBooking` WHERE ((`booking_ID` = ?) AND ((? = 1 AND `customer_ID` IS NULL) OR (`customer_ID` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `booking_date` IS NULL) OR (`booking_date` = ?)) AND ((? = 1 AND `total_price` IS NULL) OR (`total_price` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_booking_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "booking_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_customer_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "customer_ID", global::System.Data.DataRowVersion.Original, true, null));
@@ -4887,34 +4714,23 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_booking_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "booking_date", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_total_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_price", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_total_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_price", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_total_guest", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_guest", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_total_guest", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_guest", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_deposit_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deposit_amount", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_deposit_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deposit_amount", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `tblBooking` (`customer_ID`, `status`, `booking_date`, `total_price`," +
-                " `total_guest`, `special_request`, `deposit_amount`) VALUES (?, ?, ?, ?, ?, ?, ?" +
-                ")";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `tblBooking` (`customer_ID`, `status`, `booking_date`, `total_price`)" +
+                " VALUES (?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("customer_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "customer_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("booking_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "booking_date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("total_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_price", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("total_guest", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_guest", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("special_request", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "special_request", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("deposit_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deposit_amount", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `tblBooking` SET `customer_ID` = ?, `status` = ?, `booking_date` = ?, `total_price` = ?, `total_guest` = ?, `special_request` = ?, `deposit_amount` = ? WHERE ((`booking_ID` = ?) AND ((? = 1 AND `customer_ID` IS NULL) OR (`customer_ID` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `booking_date` IS NULL) OR (`booking_date` = ?)) AND ((? = 1 AND `total_price` IS NULL) OR (`total_price` = ?)) AND ((? = 1 AND `total_guest` IS NULL) OR (`total_guest` = ?)) AND ((? = 1 AND `deposit_amount` IS NULL) OR (`deposit_amount` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `tblBooking` SET `customer_ID` = ?, `status` = ?, `booking_date` = ?, `total_price` = ? WHERE ((`booking_ID` = ?) AND ((? = 1 AND `customer_ID` IS NULL) OR (`customer_ID` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `booking_date` IS NULL) OR (`booking_date` = ?)) AND ((? = 1 AND `total_price` IS NULL) OR (`total_price` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("customer_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "customer_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("booking_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "booking_date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("total_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_price", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("total_guest", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_guest", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("special_request", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "special_request", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("deposit_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deposit_amount", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_booking_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "booking_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_customer_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "customer_ID", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_customer_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "customer_ID", global::System.Data.DataRowVersion.Original, false, null));
@@ -4924,17 +4740,13 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_booking_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "booking_date", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_total_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_price", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_total_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_price", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_total_guest", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_guest", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_total_guest", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "total_guest", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_deposit_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deposit_amount", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_deposit_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "deposit_amount", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString1;
+            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4943,8 +4755,8 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT booking_ID, customer_ID, status, booking_date, total_price, total_guest, s" +
-                "pecial_request, deposit_amount FROM tblBooking";
+            this._commandCollection[0].CommandText = "SELECT booking_ID, customer_ID, status, booking_date, total_price FROM tblBooking" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4952,7 +4764,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HBS_DBDataSet.tblBookingDataTable dataTable) {
+        public virtual int Fill(HBS_DBDataSet2.tblBookingDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4965,9 +4777,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HBS_DBDataSet.tblBookingDataTable GetData() {
+        public virtual HBS_DBDataSet2.tblBookingDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HBS_DBDataSet.tblBookingDataTable dataTable = new HBS_DBDataSet.tblBookingDataTable();
+            HBS_DBDataSet2.tblBookingDataTable dataTable = new HBS_DBDataSet2.tblBookingDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4975,14 +4787,14 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet.tblBookingDataTable dataTable) {
+        public virtual int Update(HBS_DBDataSet2.tblBookingDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet dataSet) {
+        public virtual int Update(HBS_DBDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "tblBooking");
         }
         
@@ -5005,7 +4817,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_booking_ID, global::System.Nullable<int> Original_customer_ID, string Original_status, global::System.Nullable<global::System.DateTime> Original_booking_date, global::System.Nullable<int> Original_total_price, global::System.Nullable<int> Original_total_guest, global::System.Nullable<int> Original_deposit_amount) {
+        public virtual int Delete(int Original_booking_ID, global::System.Nullable<int> Original_customer_ID, string Original_status, global::System.Nullable<global::System.DateTime> Original_booking_date, global::System.Nullable<int> Original_total_price) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_booking_ID));
             if ((Original_customer_ID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -5039,22 +4851,6 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_total_guest.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_total_guest.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_deposit_amount.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_deposit_amount.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5075,7 +4871,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> customer_ID, string status, global::System.Nullable<global::System.DateTime> booking_date, global::System.Nullable<int> total_price, global::System.Nullable<int> total_guest, string special_request, global::System.Nullable<int> deposit_amount) {
+        public virtual int Insert(global::System.Nullable<int> customer_ID, string status, global::System.Nullable<global::System.DateTime> booking_date, global::System.Nullable<int> total_price) {
             if ((customer_ID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(customer_ID.Value));
             }
@@ -5100,24 +4896,6 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((total_guest.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(total_guest.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((special_request == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(special_request));
-            }
-            if ((deposit_amount.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(deposit_amount.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5138,7 +4916,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> customer_ID, string status, global::System.Nullable<global::System.DateTime> booking_date, global::System.Nullable<int> total_price, global::System.Nullable<int> total_guest, string special_request, global::System.Nullable<int> deposit_amount, int Original_booking_ID, global::System.Nullable<int> Original_customer_ID, string Original_status, global::System.Nullable<global::System.DateTime> Original_booking_date, global::System.Nullable<int> Original_total_price, global::System.Nullable<int> Original_total_guest, global::System.Nullable<int> Original_deposit_amount) {
+        public virtual int Update(global::System.Nullable<int> customer_ID, string status, global::System.Nullable<global::System.DateTime> booking_date, global::System.Nullable<int> total_price, int Original_booking_ID, global::System.Nullable<int> Original_customer_ID, string Original_status, global::System.Nullable<global::System.DateTime> Original_booking_date, global::System.Nullable<int> Original_total_price) {
             if ((customer_ID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(customer_ID.Value));
             }
@@ -5163,72 +4941,38 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((total_guest.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(total_guest.Value));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_booking_ID));
+            if ((Original_customer_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_customer_ID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((special_request == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(special_request));
-            }
-            if ((deposit_amount.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(deposit_amount.Value));
-            }
-            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_booking_ID));
-            if ((Original_customer_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_customer_ID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
             if ((Original_status == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_status));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_status));
             }
             if ((Original_booking_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_booking_date.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_booking_date.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((Original_total_price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_total_price.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_total_price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_total_guest.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_total_guest.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_deposit_amount.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_deposit_amount.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5441,7 +5185,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString1;
+            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5459,7 +5203,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HBS_DBDataSet.tblBookingDetailDataTable dataTable) {
+        public virtual int Fill(HBS_DBDataSet2.tblBookingDetailDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5472,9 +5216,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HBS_DBDataSet.tblBookingDetailDataTable GetData() {
+        public virtual HBS_DBDataSet2.tblBookingDetailDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HBS_DBDataSet.tblBookingDetailDataTable dataTable = new HBS_DBDataSet.tblBookingDetailDataTable();
+            HBS_DBDataSet2.tblBookingDetailDataTable dataTable = new HBS_DBDataSet2.tblBookingDetailDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5482,14 +5226,14 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet.tblBookingDetailDataTable dataTable) {
+        public virtual int Update(HBS_DBDataSet2.tblBookingDetailDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet dataSet) {
+        public virtual int Update(HBS_DBDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "tblBookingDetail");
         }
         
@@ -5949,7 +5693,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString1;
+            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5967,7 +5711,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HBS_DBDataSet.tblCustomerDataTable dataTable) {
+        public virtual int Fill(HBS_DBDataSet2.tblCustomerDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5980,9 +5724,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HBS_DBDataSet.tblCustomerDataTable GetData() {
+        public virtual HBS_DBDataSet2.tblCustomerDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HBS_DBDataSet.tblCustomerDataTable dataTable = new HBS_DBDataSet.tblCustomerDataTable();
+            HBS_DBDataSet2.tblCustomerDataTable dataTable = new HBS_DBDataSet2.tblCustomerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5990,14 +5734,14 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet.tblCustomerDataTable dataTable) {
+        public virtual int Update(HBS_DBDataSet2.tblCustomerDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet dataSet) {
+        public virtual int Update(HBS_DBDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "tblCustomer");
         }
         
@@ -6379,7 +6123,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString1;
+            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6396,7 +6140,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HBS_DBDataSet.tblCustomerImageDataTable dataTable) {
+        public virtual int Fill(HBS_DBDataSet2.tblCustomerImageDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6409,9 +6153,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HBS_DBDataSet.tblCustomerImageDataTable GetData() {
+        public virtual HBS_DBDataSet2.tblCustomerImageDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HBS_DBDataSet.tblCustomerImageDataTable dataTable = new HBS_DBDataSet.tblCustomerImageDataTable();
+            HBS_DBDataSet2.tblCustomerImageDataTable dataTable = new HBS_DBDataSet2.tblCustomerImageDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6419,14 +6163,14 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet.tblCustomerImageDataTable dataTable) {
+        public virtual int Update(HBS_DBDataSet2.tblCustomerImageDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet dataSet) {
+        public virtual int Update(HBS_DBDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "tblCustomerImage");
         }
         
@@ -6717,7 +6461,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString1;
+            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6734,7 +6478,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HBS_DBDataSet.tblRoomDataTable dataTable) {
+        public virtual int Fill(HBS_DBDataSet2.tblRoomDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6747,9 +6491,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HBS_DBDataSet.tblRoomDataTable GetData() {
+        public virtual HBS_DBDataSet2.tblRoomDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HBS_DBDataSet.tblRoomDataTable dataTable = new HBS_DBDataSet.tblRoomDataTable();
+            HBS_DBDataSet2.tblRoomDataTable dataTable = new HBS_DBDataSet2.tblRoomDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6757,14 +6501,14 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet.tblRoomDataTable dataTable) {
+        public virtual int Update(HBS_DBDataSet2.tblRoomDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet dataSet) {
+        public virtual int Update(HBS_DBDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "tblRoom");
         }
         
@@ -7088,7 +6832,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString1;
+            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7105,7 +6849,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HBS_DBDataSet.tblRoomImageDataTable dataTable) {
+        public virtual int Fill(HBS_DBDataSet2.tblRoomImageDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7118,9 +6862,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HBS_DBDataSet.tblRoomImageDataTable GetData() {
+        public virtual HBS_DBDataSet2.tblRoomImageDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HBS_DBDataSet.tblRoomImageDataTable dataTable = new HBS_DBDataSet.tblRoomImageDataTable();
+            HBS_DBDataSet2.tblRoomImageDataTable dataTable = new HBS_DBDataSet2.tblRoomImageDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7128,14 +6872,14 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet.tblRoomImageDataTable dataTable) {
+        public virtual int Update(HBS_DBDataSet2.tblRoomImageDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet dataSet) {
+        public virtual int Update(HBS_DBDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "tblRoomImage");
         }
         
@@ -7389,7 +7133,6 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("extra_fee", "extra_fee");
             tableMapping.ColumnMappings.Add("session_available", "session_available");
             tableMapping.ColumnMappings.Add("session_fee", "session_fee");
-            tableMapping.ColumnMappings.Add("service", "service");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -7413,8 +7156,8 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `tblRoomType` (`room_Type`, `price_per_night`, `max_person`, `extra_a" +
-                "vailable`, `extra_fee`, `session_available`, `session_fee`, `service`) VALUES (?" +
-                ", ?, ?, ?, ?, ?, ?, ?)";
+                "vailable`, `extra_fee`, `session_available`, `session_fee`) VALUES (?, ?, ?, ?, " +
+                "?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("room_Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "room_Type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price_per_night", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price_per_night", global::System.Data.DataRowVersion.Current, false, null));
@@ -7423,10 +7166,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("extra_fee", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "extra_fee", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("session_available", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "session_available", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("session_fee", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "session_fee", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("service", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "service", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `tblRoomType` SET `room_Type` = ?, `price_per_night` = ?, `max_person` = ?, `extra_available` = ?, `extra_fee` = ?, `session_available` = ?, `session_fee` = ?, `service` = ? WHERE ((`room_type_ID` = ?) AND ((? = 1 AND `room_Type` IS NULL) OR (`room_Type` = ?)) AND ((? = 1 AND `price_per_night` IS NULL) OR (`price_per_night` = ?)) AND ((? = 1 AND `max_person` IS NULL) OR (`max_person` = ?)) AND ((? = 1 AND `extra_available` IS NULL) OR (`extra_available` = ?)) AND ((? = 1 AND `extra_fee` IS NULL) OR (`extra_fee` = ?)) AND ((? = 1 AND `session_available` IS NULL) OR (`session_available` = ?)) AND ((? = 1 AND `session_fee` IS NULL) OR (`session_fee` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `tblRoomType` SET `room_Type` = ?, `price_per_night` = ?, `max_person` = ?, `extra_available` = ?, `extra_fee` = ?, `session_available` = ?, `session_fee` = ? WHERE ((`room_type_ID` = ?) AND ((? = 1 AND `room_Type` IS NULL) OR (`room_Type` = ?)) AND ((? = 1 AND `price_per_night` IS NULL) OR (`price_per_night` = ?)) AND ((? = 1 AND `max_person` IS NULL) OR (`max_person` = ?)) AND ((? = 1 AND `extra_available` IS NULL) OR (`extra_available` = ?)) AND ((? = 1 AND `extra_fee` IS NULL) OR (`extra_fee` = ?)) AND ((? = 1 AND `session_available` IS NULL) OR (`session_available` = ?)) AND ((? = 1 AND `session_fee` IS NULL) OR (`session_fee` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("room_Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "room_Type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price_per_night", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price_per_night", global::System.Data.DataRowVersion.Current, false, null));
@@ -7435,7 +7177,6 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("extra_fee", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "extra_fee", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("session_available", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "session_available", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("session_fee", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "session_fee", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("service", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "service", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_room_type_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "room_type_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_room_Type", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "room_Type", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_room_Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "room_Type", global::System.Data.DataRowVersion.Original, false, null));
@@ -7457,7 +7198,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString1;
+            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7467,7 +7208,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT room_type_ID, room_Type, price_per_night, max_person, extra_available, ext" +
-                "ra_fee, session_available, session_fee, service FROM tblRoomType";
+                "ra_fee, session_available, session_fee FROM tblRoomType";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7475,7 +7216,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HBS_DBDataSet.tblRoomTypeDataTable dataTable) {
+        public virtual int Fill(HBS_DBDataSet2.tblRoomTypeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7488,9 +7229,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HBS_DBDataSet.tblRoomTypeDataTable GetData() {
+        public virtual HBS_DBDataSet2.tblRoomTypeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HBS_DBDataSet.tblRoomTypeDataTable dataTable = new HBS_DBDataSet.tblRoomTypeDataTable();
+            HBS_DBDataSet2.tblRoomTypeDataTable dataTable = new HBS_DBDataSet2.tblRoomTypeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7498,14 +7239,14 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet.tblRoomTypeDataTable dataTable) {
+        public virtual int Update(HBS_DBDataSet2.tblRoomTypeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet dataSet) {
+        public virtual int Update(HBS_DBDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "tblRoomType");
         }
         
@@ -7594,7 +7335,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string room_Type, global::System.Nullable<int> price_per_night, global::System.Nullable<int> max_person, bool extra_available, global::System.Nullable<int> extra_fee, bool session_available, global::System.Nullable<int> session_fee, string service) {
+        public virtual int Insert(string room_Type, global::System.Nullable<int> price_per_night, global::System.Nullable<int> max_person, bool extra_available, global::System.Nullable<int> extra_fee, bool session_available, global::System.Nullable<int> session_fee) {
             if ((room_Type == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -7627,12 +7368,6 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((service == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(service));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7653,23 +7388,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string room_Type, 
-                    global::System.Nullable<int> price_per_night, 
-                    global::System.Nullable<int> max_person, 
-                    bool extra_available, 
-                    global::System.Nullable<int> extra_fee, 
-                    bool session_available, 
-                    global::System.Nullable<int> session_fee, 
-                    string service, 
-                    int Original_room_type_ID, 
-                    string Original_room_Type, 
-                    global::System.Nullable<int> Original_price_per_night, 
-                    global::System.Nullable<int> Original_max_person, 
-                    bool Original_extra_available, 
-                    global::System.Nullable<int> Original_extra_fee, 
-                    bool Original_session_available, 
-                    global::System.Nullable<int> Original_session_fee) {
+        public virtual int Update(string room_Type, global::System.Nullable<int> price_per_night, global::System.Nullable<int> max_person, bool extra_available, global::System.Nullable<int> extra_fee, bool session_available, global::System.Nullable<int> session_fee, int Original_room_type_ID, string Original_room_Type, global::System.Nullable<int> Original_price_per_night, global::System.Nullable<int> Original_max_person, bool Original_extra_available, global::System.Nullable<int> Original_extra_fee, bool Original_session_available, global::System.Nullable<int> Original_session_fee) {
             if ((room_Type == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -7702,56 +7421,50 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((service == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(service));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_room_type_ID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_room_type_ID));
             if ((Original_room_Type == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_room_Type));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_room_Type));
             }
             if ((Original_price_per_night.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_price_per_night.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_price_per_night.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((Original_max_person.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_max_person.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_max_person.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_extra_available));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Original_extra_available));
             if ((Original_extra_fee.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_extra_fee.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_extra_fee.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((bool)(Original_session_available));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(Original_session_available));
             if ((Original_session_fee.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_session_fee.Value));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_session_fee.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7930,7 +7643,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString1;
+            this._connection.ConnectionString = global::HotelBookingSystem.Properties.Settings.Default.HBS_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7947,7 +7660,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HBS_DBDataSet.tblUserDataTable dataTable) {
+        public virtual int Fill(HBS_DBDataSet2.tblUserDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7960,9 +7673,9 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HBS_DBDataSet.tblUserDataTable GetData() {
+        public virtual HBS_DBDataSet2.tblUserDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HBS_DBDataSet.tblUserDataTable dataTable = new HBS_DBDataSet.tblUserDataTable();
+            HBS_DBDataSet2.tblUserDataTable dataTable = new HBS_DBDataSet2.tblUserDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7970,14 +7683,14 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet.tblUserDataTable dataTable) {
+        public virtual int Update(HBS_DBDataSet2.tblUserDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HBS_DBDataSet dataSet) {
+        public virtual int Update(HBS_DBDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "tblUser");
         }
         
@@ -8370,7 +8083,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(HBS_DBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(HBS_DBDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tblCustomerTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tblCustomer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -8452,7 +8165,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(HBS_DBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(HBS_DBDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tblCustomerTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tblCustomer.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -8526,7 +8239,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(HBS_DBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(HBS_DBDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tblUserTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tblUser.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -8624,7 +8337,7 @@ namespace HotelBookingSystem.HBS_DBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(HBS_DBDataSet dataSet) {
+        public virtual int UpdateAll(HBS_DBDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
