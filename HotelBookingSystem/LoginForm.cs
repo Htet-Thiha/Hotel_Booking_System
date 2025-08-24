@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
+
 namespace HotelBookingSystem
 {
     public partial class LoginForm : Form
@@ -16,13 +17,13 @@ namespace HotelBookingSystem
         public LoginForm()
         {
             InitializeComponent();
+            this.FormClosed += LoginForm_FormClosed;
         }
-
+        User user = new User();
         private void loginBtn_Click(object sender, EventArgs e)
         {
-
-            String userName = userTextBox.Text;
-            String password = passTextBox.Text;
+            string userName = userTextBox.Text;
+            string password = passTextBox.Text;
 
             string connString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ngateeth's\Documents\HBS_DB.mdb";
 
@@ -32,31 +33,54 @@ namespace HotelBookingSystem
                 {
                     connection.Open();
 
-                    string query = "SELECT COUNT(*) FROM tblUser WHERE UserName = ? AND Password = ?";
+                    string query = "SELECT UserID, UserRole FROM tblUser WHERE UserName = ? AND Password = ?";
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("?", userName);
                         command.Parameters.AddWithValue("?", password);
 
-                        int count = (int)command.ExecuteScalar();
+                        using (OleDbDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read()) // user exists
+                            {
+                                int userID = Convert.ToInt32(reader["UserID"]);
+                                int userRole = Convert.ToInt32(reader["UserRole"]);
 
-                        if (count > 0)
-                        {
-                            Form homePage = new HomePage();
-                            homePage.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                if (userRole > 1) {
+                                    AuthForm auth = new AuthForm(userRole);
+                                    auth.Show();
+                                    this.Hide();
+                                    return;
+                               }
+
+                                HomePage homePage = new HomePage(userRole);
+                                homePage.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                System.Windows.Forms.MessageBox.Show(
+                                    "Invalid username or password.",
+                                    "Login Failed",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error
+                                );
+                            }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Database error: " + ex.Message);
+                    System.Windows.Forms.MessageBox.Show("Database error: " + ex.Message);
                 }
             }
         }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

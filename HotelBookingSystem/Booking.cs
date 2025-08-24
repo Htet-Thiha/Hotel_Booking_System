@@ -198,6 +198,37 @@ namespace HotelBookingSystem
             }
         }
 
+        public bool UpdateBookingMinor(int bookingId, int totalGuest, string specialRequest, double depositAmount)
+        {
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "UPDATE tblBooking SET total_guest = ?,special_request =? , deposit_amount = ? WHERE booking_ID = ?";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+                        
+                        command.Parameters.AddWithValue("?", totalGuest);
+                        command.Parameters.AddWithValue("?", specialRequest);
+                        command.Parameters.AddWithValue("?", depositAmount);
+                        command.Parameters.AddWithValue("?", bookingId);
+
+                        int result = command.ExecuteNonQuery();
+
+                        return result > 0;
+                    }
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+
+
         public bool UpdateBookingStatus(int bookingId,string status)
         {
             using (OleDbConnection connection = new OleDbConnection(connectionString))

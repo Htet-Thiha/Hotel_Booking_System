@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace HotelBookingSystem
 {
-    public partial class HomePage : Form
+    public partial class HomePage : BaseForm 
     {
-        public HomePage()
+        private int _receivedId;
+        public HomePage(int id)
         {
             InitializeComponent();
+            _receivedId = id;
             ShowStatus();
+            authCheck();
             
         }
         int customerID;
@@ -23,6 +26,8 @@ namespace HotelBookingSystem
         Customer customer = new Customer();
         Booking booking = new Booking();
         Room room = new Room();
+        double dueAmount =0;
+        double depositAmount = 0;
         private void HomePage_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hBS_DBDataSet3.tblBooking' table. You can move, or remove it, as needed.
@@ -92,7 +97,7 @@ namespace HotelBookingSystem
                 guestBox.Text = row.Cells["totalguestDataGridViewTextBoxColumn"].Value.ToString();
                 specialRequestBox.Text = row.Cells["specialrequestDataGridViewTextBoxColumn"].Value.ToString();
                 double totalPrice = 0;
-                double depositAmount = 0;
+                
                 if (!double.TryParse(totalPriceBox.Text, out totalPrice))
                 {
                     totalPrice = 0;
@@ -101,8 +106,9 @@ namespace HotelBookingSystem
                 {
                     depositAmount = 0;
                 }
-                double dueAmount = totalPrice - depositAmount;
+                dueAmount = totalPrice - depositAmount;
                 dueAmountBox.Text = dueAmount.ToString();
+                
 
             }
         }
@@ -122,6 +128,57 @@ namespace HotelBookingSystem
                 }
             }
             ResetForm();
+        }
+
+        private void chechOutBtn_Click(object sender, EventArgs e)
+        {
+            if (dueAmount != 0)
+            {
+                MessageBox.Show("Pay the bill first");
+                return;
+            }
+            BookingDetail bookingdDetail = new BookingDetail();
+            booking.UpdateBookingStatus(bookingID, "checkOut");
+            DataSet bookingDetailList = bookingdDetail.GetBookingDetailsByBookingId(bookingID);
+            if (bookingDetailList != null && bookingDetailList.Tables.Count > 0)
+            {
+                DataTable dt = bookingDetailList.Tables[0];
+                foreach (DataRow row in dt.Rows)
+                {
+                    int roomID = Convert.ToInt32(row["room_ID"]);
+                    room.UpdateStatusByID(roomID, "available");
+                }
+            }
+            ResetForm();
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            if (depositAmount != 0)
+            {
+                MessageBox.Show("Need to pay back deposit");
+                return;
+            }
+            BookingDetail bookingdDetail = new BookingDetail();
+            booking.UpdateBookingStatus(bookingID, "cancel");
+            DataSet bookingDetailList = bookingdDetail.GetBookingDetailsByBookingId(bookingID);
+            if (bookingDetailList != null && bookingDetailList.Tables.Count > 0)
+            {
+                DataTable dt = bookingDetailList.Tables[0];
+                foreach (DataRow row in dt.Rows)
+                {
+                    int roomID = Convert.ToInt32(row["room_ID"]);
+                    room.UpdateStatusByID(roomID, "available");
+                }
+            }
+            ResetForm();
+        }
+
+        private void authCheck() {
+            if (_receivedId == 1) {
+                cancelBtn.Visible = false;
+            }
+
         }
 
         private void ResetForm()
@@ -148,19 +205,9 @@ namespace HotelBookingSystem
             availableRooms.Text = room.GetTotalRoomsByStatus("available").ToString();
             currentGuest.Text = booking.GetTotalGuestsByStatus("checkIn").ToString();
         }
+       
 
-        private void bookingToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Form BookingForm = new BookingForm();
-            BookingForm.Show();
-        }
-
-        private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form RoomForm = new RoomForm();
-            RoomForm.Show();
-        }
-
+      
 
     }
 }

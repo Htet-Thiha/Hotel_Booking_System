@@ -39,11 +39,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(198, 113);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(177, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 25);
+            this.label1.Size = new System.Drawing.Size(167, 55);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Hotel Name";
+            this.label1.Text = "ECHO";
             // 
             // userTextBox
             // 
@@ -56,13 +57,14 @@
             // 
             this.passTextBox.Location = new System.Drawing.Point(233, 298);
             this.passTextBox.Name = "passTextBox";
+            this.passTextBox.PasswordChar = '*';
             this.passTextBox.Size = new System.Drawing.Size(206, 31);
             this.passTextBox.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 228);
+            this.label2.Location = new System.Drawing.Point(66, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 25);
             this.label2.TabIndex = 3;
@@ -71,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 298);
+            this.label3.Location = new System.Drawing.Point(79, 301);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 25);
             this.label3.TabIndex = 4;
@@ -79,18 +81,19 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(146, 427);
+            this.loginBtn.Location = new System.Drawing.Point(151, 413);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(221, 59);
+            this.loginBtn.Size = new System.Drawing.Size(221, 73);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(538, 619);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.label3);
@@ -98,7 +101,8 @@
             this.Controls.Add(this.passTextBox);
             this.Controls.Add(this.userTextBox);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);

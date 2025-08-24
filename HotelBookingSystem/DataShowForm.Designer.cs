@@ -36,7 +36,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 39);
+            this.dataGridView1.Location = new System.Drawing.Point(116, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(1310, 652);
@@ -44,19 +44,20 @@
             // 
             // getBtn
             // 
-            this.getBtn.Location = new System.Drawing.Point(602, 739);
+            this.getBtn.BackColor = System.Drawing.Color.LightGreen;
+            this.getBtn.Location = new System.Drawing.Point(660, 783);
             this.getBtn.Name = "getBtn";
             this.getBtn.Size = new System.Drawing.Size(205, 79);
             this.getBtn.TabIndex = 1;
             this.getBtn.Text = "Get";
-            this.getBtn.UseVisualStyleBackColor = true;
+            this.getBtn.UseVisualStyleBackColor = false;
             this.getBtn.Click += new System.EventHandler(this.getBtn_Click);
             // 
             // DataShowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1394, 857);
+            this.ClientSize = new System.Drawing.Size(1544, 977);
             this.Controls.Add(this.getBtn);
             this.Controls.Add(this.dataGridView1);
             this.Name = "DataShowForm";

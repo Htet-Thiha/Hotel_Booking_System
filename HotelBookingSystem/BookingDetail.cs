@@ -165,5 +165,37 @@ namespace HotelBookingSystem
                 }
             }
         }
+
+        public bool UpdateBookingDetailMinor(int bookingDetailId, int extraGuest, DateTime checkIn, DateTime checkOut)
+        {
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = @"UPDATE tblBookingDetail 
+                                     SET extra_guest = ?, check_in_date = ?, check_out_date = ? 
+                                     WHERE booking_detail_ID = ?";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("?", extraGuest);
+                        command.Parameters.AddWithValue("?", checkIn);
+                        command.Parameters.AddWithValue("?", checkOut);
+                        command.Parameters.AddWithValue("?", bookingDetailId);
+
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+    
+    
     }
 }

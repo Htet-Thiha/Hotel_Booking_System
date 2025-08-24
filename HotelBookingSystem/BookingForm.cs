@@ -11,7 +11,7 @@ using System.Data.OleDb;
 
 namespace HotelBookingSystem
 {
-    public partial class BookingForm : Form
+    public partial class BookingForm : BaseForm 
     {
         public BookingForm()
         {
@@ -33,12 +33,13 @@ namespace HotelBookingSystem
             roomTypeBox.ValueMember = "Key";
         }
 
-        int customerID;
+        int customerID = 0;
         int roomID;
         int bookingID;
         string selectedRoomNo;
         string roomStatus;
         Room room = new Room();
+        double tempTotal = 0;
         List<RoomBooking> selectedRooms = new List<RoomBooking>();
 
 
@@ -75,7 +76,26 @@ namespace HotelBookingSystem
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            
+            int nrcNo = int.Parse(nrcNoBox.Text);
+            Customer customer = new Customer();
+            if (customerID < 1)
+            {
+                return;
+            }
+            bool success = customer.UpdateCustomer(customerID, customerNameBox.Text,
+                phoneNumberBox.Text,
+                emailBox.Text,
+                nrcTypeBox.Text,
+                nrcNo);
+            if (success)
+            {
+                MessageBox.Show("Customer update successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Failed to update customer.");
+            }           
+      
         }
 
         private void phoneNumberBox_TextChanged(object sender, EventArgs e)
@@ -235,8 +255,6 @@ namespace HotelBookingSystem
                         maxGuestLabel.Text = roomTypeRow["max_person"].ToString();
                         extraLabel.Text = roomTypeRow["extra_available"].ToString();
                         extraPriceLabel.Text = roomTypeRow["extra_fee"].ToString();
-                        sessionLabel.Text = roomTypeRow["session_available"].ToString();
-                        sessionPriceLabel.Text = roomTypeRow["session_fee"].ToString();
 
                         if (extraLabel.Text == "True")
                         {
@@ -270,6 +288,9 @@ namespace HotelBookingSystem
                int totalDays = difference.Days + 1;
 
                int totalPrice = netPrice * totalDays;
+
+               tempTotal += totalPrice;
+               totalPriceLabel.Text = tempTotal.ToString();
 
                takenRoomDataGrid.Rows.Add(roomID,selectedRoomNo, totalDays, totalPrice);
 
@@ -389,8 +410,6 @@ namespace HotelBookingSystem
             maxGuestLabel.Text = "0";
             extraLabel.Text = "False";
             extraPriceLabel.Text = "0";
-            sessionLabel.Text = "False";
-            sessionPriceLabel.Text = "0";
 
             guestNumberUpDown.Value = 0;
             checkInDate.Value = DateTime.Today;
